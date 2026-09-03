@@ -153,24 +153,24 @@ export const PROJECTS: Project[] = [
     name: "HLE Fan Page",
     url: "https://hle.today",
     urlLabel: "hle.today",
-    period: { ko: "2026.08 (109 commits)", en: "Aug 2026 (109 commits)" },
+    period: { ko: "2026.08 (프론트엔드 주도)", en: "Aug 2026 (led frontend)" },
     oneLiner: {
       ko: "한화생명e스포츠 팬 웹앱 (비공식)",
       en: "A fan web app for Hanwha Life Esports (unofficial)",
     },
     bullets: {
       ko: [
-        "LoL Esports API로 순위와 일정을 서버에서 집계, 세트 득실까지 직접 계산",
-        "치지직/SOOP 방송을 서버가 폴링해 실시간 중계(HLS)를 페이지에 임베드",
-        "플레이오프 잔여 경기 경우의 수 약 105만 가지를 0.7초에 전수 계산",
+        "플레이오프 대진표 구현 - 진 팀의 다음 경로, 지명 대진, 결승 주간 공식 명칭과 예매 일정까지 반영",
+        "선수단, 챔피언 지표 화면 - 계약 만료(Leaguepedia), 챔피언별 승률/DPM/KDA, 대표 챔피언 실제 전적",
+        "팬 사진 기능 - 크롭 업로드, 갤러리, 하트를 Supabase(RLS, 익명 신원, 신고/도배 즉시 차단)로 구현",
       ],
       en: [
-        "Aggregates standings and schedule server-side from the LoL Esports API, computing set records directly",
-        "Polls Chzzk/SOOP streams server-side to embed live relays (HLS) in the page",
-        "Enumerates ~1.05M playoff scenarios exhaustively in 0.7 seconds",
+        "Built the playoff bracket: where each losing team advances next, seeded matchups, finals-week official names and ticketing schedule",
+        "Roster and champion-stats screens: contract expirations (Leaguepedia), per-champion win rate/DPM/KDA, real signature-champion records",
+        "Fan-photo feature: cropped upload, gallery, and likes on Supabase (RLS, anonymous identity, instant report/spam blocking)",
       ],
     },
-    stack: ["Next.js 16", "React 19", "TypeScript", "Supabase", "hls.js", "Vercel"],
+    stack: ["Next.js 16", "React 19", "TypeScript", "Supabase", "Vercel"],
   },
   {
     name: "Cockfight",
