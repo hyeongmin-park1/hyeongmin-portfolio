@@ -689,7 +689,10 @@ img {
   }
   .section {
     padding: 12pt 0;
-    break-inside: avoid;
+  }
+  .section h2,
+  .eyebrow {
+    break-after: avoid;
   }
   .hero {
     padding: 0 0 10pt;
@@ -715,9 +718,32 @@ img {
     border-color: #bbb;
     color: #222;
   }
+  /* 인쇄에서는 그리드를 한 줄로 흐르게 해 카드가 페이지 경계에서 잘리지 않게 한다 */
   .strengths,
-  .proj-grid {
+  .proj-grid,
+  .skills {
+    display: block;
+    border: none;
+    gap: 0;
+  }
+  .strength,
+  .card {
+    border: 1px solid var(--line);
+    margin-bottom: 8pt;
+  }
+  .strength,
+  .card,
+  .flagship,
+  .exp,
+  .skillgroup,
+  .mini,
+  .portrait,
+  .bullets li {
     break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .skillgroup {
+    margin-bottom: 10pt;
   }
   a {
     color: #111 !important;
